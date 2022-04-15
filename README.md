@@ -7,7 +7,7 @@
 
 ### Drop database:
 ```sql
-    Drop DATABASE name_database
+    DROP DATABASE name_database
 ```
 
 ### Create table:
@@ -17,7 +17,7 @@
 
 ### Drop table:
 ```sql
-    Drop TABLE name_table
+    DROP TABLE name_table
 ```
 
 ### SQL Constraints:
