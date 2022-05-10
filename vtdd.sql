@@ -57,4 +57,16 @@ CREATE TABLE hang_hoa (
     - bảng lịch sử di chuyển
 */
 
+SELECT M.TenM, T.TenT, A.DienTichLonNhat
+FROM (
+		SELECT T.MaM, MAX(T.DienTich) AS DienTichLonNhat 
+		FROM TINH AS T 
+        GROUP BY (T.MaM)
+    )  AS A, 
+    MIEN AS M, 
+    TINH AS T
+WHERE A.MaM = M.MaM  
+	AND T.MaM = M.MaM  
+    AND T.DienTich = A.DienTichLonNhat;
+
 
